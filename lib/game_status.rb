@@ -52,13 +52,13 @@ end
 def winner(board)
   WIN_COMBINATIONS.detect do |win_combo|
     if win_combo.all? do |win_index|
-      board[win_index] == "X"
-      return "X"
+      board[win_index] == "O"
+      return "O"
     end
     true
   elsif win_combo.all? do |win_index|
-      board[win_index] == "O"
-      return "O"
+      board[win_index] == "X"
+      return "X"
     end
     true
   else
